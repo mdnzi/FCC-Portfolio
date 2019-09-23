@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap");
+
+/*Variable Declare*/
+:root {
+  --medium: 500;
+  --bold: 700;
+  --max-width: 1200px;
+}
+
+/*General Styling*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", Arial;
+  font-weight: var(--medium);
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.rectangle {
+  background: #000;
+  opacity: 0.1;
+  width: 1px;
+  grid-area: 1 / 3 / 1 / 3;
+  z-index: 99;
+}
+
+.right {
+  justify-self: end;
+}
+
+/*Navigation*/
+.main-nav {
+  grid-area: 1 / 1 / 1 / 5;
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+  height: 3rem;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(10, minmax(20px, 120px));
+  align-items: center;
+  background: #fff;
+  z-index: 1;
+}
+
+.logo {
+  width: 40px;
+  grid-area: 1 / 1 / 1 / 3;
+  justify-self: end;
+}
+
+.nav-bar {
+  grid-area: 1 / 4 / 1 / 10;
+  justify-self: start;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li {
+  padding-right: 20px;
+}
+
+.nav-bar ul li a {
+  color: #000;
+}
+
+/*Main Section*/
+
+.main-section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(20px, 120px));
+}
+
+.left-tab {
+  height: 70%;
+  max-height: 70%;
+  margin: auto 0;
+  grid-area: 1 / 2 / 1 / 3;
+  justify-self: end;
+  justify-content: center;
+}
+
+.left-tab p {
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  float: right;
+  margin-top: -15px;
+}
+
+.right-tab {
+  height: 70%;
+  max-height: 70%;
+  width: 100%;
+  margin: auto 0;
+  grid-area: 1 / 4 / 1 / 10;
+  justify-self: start;
+}
+
+.right-tab p {
+  font-size: calc(25px + 1vw);
+  font-weight: var(--bold);
+}
+
+/*Projects Section*/
+
+.project-tile li {
+  padding-bottom: 1.5rem;
+}
+
+.project-tile li a {
+  color: #000;
+  font-size: calc(25px + 1vw);
+  font-weight: var(--bold);
+}
+
+/*Contact Section*/
+
+.icons {
+  width: 30px;
+  padding: 20px 20px 0px 0px;
+}
